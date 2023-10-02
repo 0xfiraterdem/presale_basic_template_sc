@@ -29,7 +29,7 @@ pub trait PresaleContract {
 
         require!(tokens_to_buy <= total_tokens, "Not enough tokens available {}", tokens_to_buy);
 
-        let tokens_to_send = tokens_to_buy.clone() * BigUint::from(TOTAL_PERCENTAGE); // TOTAL_PERCENTAGE sabitini BigUint türüne çevirerek çarpma işlemi gerçekleştirilir.
+        let tokens_to_send = tokens_to_buy.clone() * BigUint::from(TOTAL_PERCENTAGE); 
         
         self.total_tokens().set(&(total_tokens - tokens_to_buy));
         
