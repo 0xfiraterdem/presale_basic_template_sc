@@ -1,0 +1,27 @@
+{
+    "configurations": {
+        "default": {
+            "proxy": "https://devnet-api.multiversx.com",
+            "chainID": "D"
+        }
+    },
+    "contract": {
+        "deploy": {
+            "verbose": true,
+            "bytecode": "output/presale.wasm",
+            "recall-nonce": true,
+            "pem": "../wallet/your.pem",
+            "gas-limit": 60000000,
+            "arguments": [
+                "token price(0x(hex))", 
+                "total token in sc(0x(hex)", 
+                "token id(0x(hex)"
+            ],
+            "send": true,
+            "metadata-payable":true,
+            "outfile": "deploy-testnet.interaction.json",
+            "proxy": "https://devnet-api.multiversx.com",
+            "chain": "D"
+        }
+    }
+}
